@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b5u2iyqhq2rfj"]
+
+[ext_resource type="Script" uid="uid://kyw8xgvl4xgh" path="res://ball.gd" id="1_xg55g"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(50.19876, 37.316593)
+
+[sub_resource type="Theme" id="Theme_dc7t5"]
+default_base_scale = 0.33
+
+[node name="LittleBox" type="RigidBody2D" unique_id=1990384842]
+rotation = 0.24958208
+mass = 0.242
+physics_material_override = SubResource("PhysicsMaterial_ig7tw")
+script = ExtResource("1_xg55g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=150290487]
+position = Vector2(0.36100805, 0.22801787)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=308036794]
+offset_left = -24.997097
+offset_top = -18.545391
+offset_right = 25.441498
+offset_bottom = 19.165333
+theme = SubResource("Theme_dc7t5")
+color = Color(0.6889684, 0.39660054, 3.85046e-07, 1)
